@@ -1,6 +1,8 @@
-package VideoJuego;
+package Armas;
 
-public class Espada extends Arma{
+import Armas.Arma;
+
+public class Espada extends Arma {
 
 
     public Espada(double damage) {

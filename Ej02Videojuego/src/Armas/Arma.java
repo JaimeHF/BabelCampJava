@@ -1,4 +1,4 @@
-package VideoJuego;
+package Armas;
 
 public abstract class Arma {
 

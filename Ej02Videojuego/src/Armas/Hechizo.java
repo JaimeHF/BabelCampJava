@@ -1,4 +1,6 @@
-package VideoJuego;
+package Armas;
+
+import Armas.Arma;
 
 public class Hechizo extends Arma {
 

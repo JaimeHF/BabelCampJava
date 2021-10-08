@@ -1,4 +1,6 @@
-package VideoJuego;
+package Personajes;
+
+import Armas.Arma;
 
 import java.util.List;
 

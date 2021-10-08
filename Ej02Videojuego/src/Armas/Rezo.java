@@ -1,6 +1,8 @@
-package VideoJuego;
+package Armas;
 
-public class Rezo extends Arma{
+import Armas.Arma;
+
+public class Rezo extends Arma {
 
     public Rezo(double damage) {
         super(damage);

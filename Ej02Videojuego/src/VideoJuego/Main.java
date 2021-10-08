@@ -1,5 +1,9 @@
 package VideoJuego;
 
+import Armas.*;
+import Personajes.Guerrero;
+import Personajes.Mago;
+
 import java.util.List;
 import java.util.Scanner;
 

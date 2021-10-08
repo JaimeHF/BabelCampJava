@@ -1,6 +1,8 @@
-package VideoJuego;
+package Armas;
 
-public class Arco extends Arma{
+import Armas.Arma;
+
+public class Arco extends Arma {
 
     public Arco(double damage) {
         super(damage);
