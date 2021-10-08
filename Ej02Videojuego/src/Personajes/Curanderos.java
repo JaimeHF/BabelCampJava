@@ -25,11 +25,5 @@ public class Curanderos extends Jugador{
         }
 
     }
-   // public double atacar() {
-   //     if(getArma().getTipo().equals("Rezo")){
-   //         return 12+getArma().usarArma();
-   //     }else {
-   //         return getArma().usarArma();
-   //     }
-   // }
+
 }

@@ -24,11 +24,5 @@ public class Mago extends Jugador{
         }
 
     }
-    //public double atacar() {
-    //    if(getArma().getTipo().equals("Hechizo")){
-    //        return 12+getArma().usarArma();
-    //    }else {
-    //        return getArma().usarArma();
-    //    }
-    //}
+
 }

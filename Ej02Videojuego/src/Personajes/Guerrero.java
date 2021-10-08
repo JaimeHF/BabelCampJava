@@ -31,14 +31,5 @@ public class Guerrero extends Jugador {
             }
 
     }
-
-    //public double atacar() {
-
-   //    if(getArma().getTipo().equals("Espada")||getArma().getTipo().equals("Arco")){
-   //        return 12+getArma().usarArma();
-   //    }else {
-   //        return getArma().usarArma();
-   //    }
-
-   //}
+    
 }

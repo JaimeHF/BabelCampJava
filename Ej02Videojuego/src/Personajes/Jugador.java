@@ -7,13 +7,11 @@ import java.util.List;
 public abstract class Jugador {
     private String nombre;
     private double vida;
-    //private Arma arma;
     private List<Arma> listArma;
 
     public Jugador(String nombre, double vida, List<Arma> listArma) {
         this.nombre = nombre;
         this.vida = vida;
-       // this.arma = arma;
         this.listArma=listArma;
 
     }
@@ -42,13 +40,6 @@ public abstract class Jugador {
         this.listArma = listArma;
     }
 
-    //public Arma getArma() {
-    //    return arma;
-    //}
-
-   // public void setArma(Arma arma) {
-   //     this.arma = arma;
-   // }
 
     public abstract double atacar(int e);
 }
