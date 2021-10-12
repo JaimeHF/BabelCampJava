@@ -30,8 +30,6 @@ public class Main {
         Mago m1=new Mago("Merlin",100,listArmaMago);
 
 
-
-
        do{
                 //Turnos aleatorios
             int ramdon= (int)(Math.random()*10+1);
@@ -53,14 +51,11 @@ public class Main {
         } while(m1.getVida()>0&&g1.getVida()>0);
 
 
-
         if(m1.getVida()<0){
             System.out.println(g1.getNombre()+" WIN");
         }else{
             System.out.println(m1.getNombre()+" WIN");
         }
-
-
 
 
     }

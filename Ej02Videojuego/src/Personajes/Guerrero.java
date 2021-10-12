@@ -19,7 +19,6 @@ public class Guerrero extends Jugador {
     }
 
 
-
     @Override
     public double atacar(int e) {
         int ramdon= e;
@@ -31,5 +30,5 @@ public class Guerrero extends Jugador {
             }
 
     }
-    
+
 }
