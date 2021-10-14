@@ -8,7 +8,7 @@ public class Hilo extends Thread {
      Runnable primo =  ()-> {
 
         boolean primo=true;
-        System.out.println("Comienza el hilo "+Thread.currentThread().getName());
+        System.out.println("Comienza el "+Thread.currentThread().getName());
         long inicio=System.currentTimeMillis();
         if(num<=2){
             primo = false;

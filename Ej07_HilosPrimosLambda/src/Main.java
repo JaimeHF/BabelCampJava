@@ -15,19 +15,19 @@ public class Main {
         num1 = sc.nextInt();
         Hilo h1 = new Hilo(num1);
         Thread t1=new Thread(h1.primo);
-        t1.setName("Hilo 1");
+        t1.setName("hilo 1");
 
         System.out.println("Introduzca el primer segundo");
         num2 = sc.nextInt();
         Hilo h2 = new Hilo(num2);
         Thread t2=new Thread(h2.primo);
-        t2.setName("Hilo 2");
+        t2.setName("hilo 2");
 
         System.out.println("Introduzca el primer tercero");
         num3 = sc.nextInt();
         Hilo h3 = new Hilo(num3);
         Thread t3=new Thread(h3.primo);
-        t3.setName("Hilo 3");
+        t3.setName("hilo 3");
 
 
 
