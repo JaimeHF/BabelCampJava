@@ -10,14 +10,20 @@ public class Hilo  extends Thread{
     @Override
     public void run() {
         boolean primo=true;
-        System.out.println("Comienza el hilo "+Thread.currentThread().getName());
+        System.out.println("Comienza el "+Thread.currentThread().getName());
         long inicio=System.currentTimeMillis();
-        for (int i=2; i<num; i++) {
-            if (num % i == 0) {
-                primo = false;
-                break;
+
+        if(num<=2){
+            primo = false;
+        }else{
+            for (int i=2; i<num; i++) {
+                if (num % i == 0) {
+                    primo = false;
+                    break;
+                }
             }
         }
+
         long fin =System.currentTimeMillis();
         double tiempo = (double) ((fin - inicio));
         if(primo){
