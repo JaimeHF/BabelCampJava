@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Lista de RAMS-->
+    <bean id="listaRam" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.Ram">
+                <bean class="entity.Ram">
+                    <property  name="precio" value="100"/>
+                    <property  name="hz" value="60"/>
+                    <property  name="marca" value="bellota"/>
+                </bean>
+                <bean class="entity.Ram">
+                    <property  name="precio" value="100"/>
+                    <property  name="hz" value="60"/>
+                    <property  name="marca" value="bellota"/>
+                </bean>
+
+            </list>
+        </constructor-arg>
+    </bean>
+    <!-- RAMS para asociar a componentes-->
+    <bean id="Ram1" class="entity.Ram">
+        <property  name="precio" value="1000"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="bellota"/>
+    </bean>
+    <bean id="Ram2" class="entity.Ram">
+        <property  name="precio" value="1000"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="bellota"/>
+    </bean>
+    <bean id="Ram3" class="entity.Ram">
+        <property  name="precio" value="1000"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="bellota"/>
+    </bean>
+
+    <!-- Lista Perifericos-->
+    <bean id="listaPerifericos" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.Periferico">
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Monitor"/>
+                    <property  name="precio" value="100"/>
+                    <property  name="marca" value="bellota"/>
+                </bean>
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Teclado"/>
+                    <property  name="precio" value="100"/>
+                    <property  name="marca" value="bellota"/>
+                </bean>
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Raton"/>
+                    <property  name="precio" value="100"/>
+                    <property  name="marca" value="bellota"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Lista Tarjetas Graficas-->
+    <bean id="listaTarjetaGrafica" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.TarjetaGrafica">
+                <bean class="entity.TarjetaGrafica">
+                    <property  name="modelo" value="grafica"/>
+                    <property  name="precio" value="100"/>
+                    <property  name="marca" value="bellota"/>
+                    <property name="ram" ref="Ram2"/>
+                </bean>
+                <bean class="entity.TarjetaGrafica">
+                    <property  name="modelo" value="grafica"/>
+                    <property  name="precio" value="100"/>
+                    <property  name="marca" value="bellota"/>
+                    <property  name="ram" ref="Ram1"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="Tarjeta1" class="entity.TarjetaGrafica">
+        <property  name="modelo" value="grafica"/>
+        <property  name="precio" value="100"/>
+        <property  name="marca" value="bellota"/>
+        <property  name="ram" ref="Ram3"/>
+    </bean>
+
+    <!-- Procesador-->
+    <bean id="Procesador" class="entity.Procesador">
+        <property  name="precio" value="1000"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="bellota"/>
+        <property name="tarjetaGrafica" ref="Tarjeta1"/>
+    </bean>
+
+    <!--  Placa base -->
+
+    <bean id="PlacaBase" class="entity.PlacaBase">
+        <property  name="modelo" value="Placa Base"/>
+        <property  name="precio" value="100"/>
+        <property  name="marca" value="bellota"/>
+    </bean>
+
+
+    <!-- Ordenador montado-->
+    <bean id="Ordenador" class="entity.Ordenador" scope="singleton">
+        <property  name="precio" value="1000"/>
+        <property  name="marca" value="Nisu"/>
+        <property  name="listRam" ref="listaRam"/>
+        <property  name="listaPerifericos" ref="listaPerifericos"/>
+        <property  name="listaTarjetaGrafica" ref="listaTarjetaGrafica"/>
+        <property  name="placaBase" ref="PlacaBase"/>
+        <property  name="procesador" ref="Procesador"/>
+    </bean>
+</beans>
