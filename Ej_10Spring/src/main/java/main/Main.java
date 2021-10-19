@@ -10,6 +10,7 @@ public class Main {
          ApplicationContext context =new ClassPathXmlApplicationContext("ApplicationContext.xml");
         Ordenador o= context.getBean("Ordenador",Ordenador.class);
         System.out.println(o);
+        System.out.println("Precio por componentes: "+o.calcularPrecioComponentes());
 
     }
 }

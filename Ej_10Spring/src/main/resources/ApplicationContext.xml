@@ -21,6 +21,7 @@
             </list>
         </constructor-arg>
     </bean>
+
     <!-- RAMS para asociar a componentes-->
     <bean id="Ram1" class="entity.Ram">
         <property  name="precio" value="1000"/>
@@ -81,6 +82,7 @@
         </constructor-arg>
     </bean>
 
+    <!-- Tarjetas Graficas para asociar a componentes-->
     <bean id="Tarjeta1" class="entity.TarjetaGrafica">
         <property  name="modelo" value="grafica"/>
         <property  name="precio" value="100"/>
@@ -97,7 +99,6 @@
     </bean>
 
     <!--  Placa base -->
-
     <bean id="PlacaBase" class="entity.PlacaBase">
         <property  name="modelo" value="Placa Base"/>
         <property  name="precio" value="100"/>
