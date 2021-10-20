@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Lista de RAMS-->
+    <bean id="listRam" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.Ram">
+                <bean class="entity.Ram">
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="hz" value="60"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                </bean>
+                <bean class="entity.Ram">
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="hz" value="60"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                </bean>
+
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- RAMS para asociar a componentes-->
+    <bean id="Ram1" class="entity.Ram" >
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+    <bean id="Ram2" class="entity.Ram" >
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+    <bean id="Ram3" class="entity.Ram" >
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+
+    <!-- Lista Perifericos-->
+    <bean id="listaPerifericos" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.Periferico">
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Monitor"/>
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                </bean>
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Teclado"/>
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                </bean>
+                <bean class="entity.Periferico">
+                    <property  name="nombre" value="Raton"/>
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Lista Tarjetas Graficas-->
+    <bean id="listaTarjetaGrafica" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="entity.TarjetaGrafica">
+                <bean class="entity.TarjetaGrafica" >
+                    <property  name="modelo" value="grafica"/>
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="ram" ref="Ram2"/>
+                </bean>
+                <bean class="entity.TarjetaGrafica">
+                    <property  name="modelo" value="grafica"/>
+                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property  name="ram" ref="Ram1"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Tarjetas Graficas para asociar a componentes-->
+    <bean id="Tarjeta" class="entity.TarjetaGrafica" >
+        <property  name="modelo" value="grafica"/>
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+        <property  name="ram" ref="Ram3"/>
+    </bean>
+
+    <!-- Procesador-->
+    <bean id="procesador" class="entity.Procesador" autowire="byType">
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="hz" value="60"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+
+    <!--  Placa base -->
+    <bean id="placaBase" class="entity.PlacaBase" >
+        <property  name="modelo" value="Placa Base"/>
+        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+    <!-- Intanciar clase nombres random -->
+    <bean id="Randoms" class="util.Randoms"></bean>
+
+    <!-- Ordenador montado-->
+    <bean id="ordenadorFin" class="entity.Ordenador"></bean>
+
+    <bean id="Ordenador" class="entity.Ordenador"  autowire="byName">
+        <property  name="precio" value="1000"/>
+        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+    </bean>
+
+    <bean id="DaoOrdenador" class="persistencia.DaoOrdenador"></bean>
+</beans>
+
+<!-- #{Ordenador.calcularPrecioComponentes()}-->
+
