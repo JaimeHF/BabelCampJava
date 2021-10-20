@@ -10,8 +10,8 @@ public class DaoOrdenador {
         try {
             FileOutputStream fos = new FileOutputStream("src/main/resources/Ordenador.txt");
             ObjectOutputStream oos= new ObjectOutputStream(fos);
-
             oos.writeObject(o.toString());
+
             oos.flush();
             oos.close();
             fos.close();

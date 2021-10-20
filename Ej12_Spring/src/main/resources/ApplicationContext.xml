@@ -107,11 +107,11 @@
     <bean id="Randoms" class="util.Randoms"></bean>
 
     <!-- Ordenador montado-->
-    <bean id="ordenadorFin" class="entity.Ordenador"></bean>
+
 
     <bean id="Ordenador" class="entity.Ordenador"  autowire="byName">
-        <property  name="precio" value="1000"/>
         <property  name="marca" value="#{Randoms.randomNombre()}"/>
+        <property  name="precio" value="1000"/>
     </bean>
 
     <bean id="DaoOrdenador" class="persistencia.DaoOrdenador"></bean>
