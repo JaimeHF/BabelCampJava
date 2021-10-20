@@ -23,17 +23,17 @@
     </bean>
 
     <!-- RAMS para asociar a componentes-->
-    <bean id="Ram1" class="entity.Ram">
+    <bean id="Ram1" class="entity.Ram" scope="singleton">
         <property  name="precio" value="1000"/>
         <property  name="hz" value="60"/>
         <property  name="marca" value="bellota"/>
     </bean>
-    <bean id="Ram2" class="entity.Ram">
+    <bean id="Ram2" class="entity.Ram" scope="singleton">
         <property  name="precio" value="1000"/>
         <property  name="hz" value="60"/>
         <property  name="marca" value="bellota"/>
     </bean>
-    <bean id="Ram3" class="entity.Ram">
+    <bean id="Ram3" class="entity.Ram" scope="singleton">
         <property  name="precio" value="1000"/>
         <property  name="hz" value="60"/>
         <property  name="marca" value="bellota"/>
@@ -66,7 +66,7 @@
     <bean id="listaTarjetaGrafica" class="java.util.ArrayList">
         <constructor-arg>
             <list value-type="entity.TarjetaGrafica">
-                <bean class="entity.TarjetaGrafica">
+                <bean class="entity.TarjetaGrafica" >
                     <property  name="modelo" value="grafica"/>
                     <property  name="precio" value="100"/>
                     <property  name="marca" value="bellota"/>
@@ -83,7 +83,7 @@
     </bean>
 
     <!-- Tarjetas Graficas para asociar a componentes-->
-    <bean id="Tarjeta1" class="entity.TarjetaGrafica">
+    <bean id="Tarjeta1" class="entity.TarjetaGrafica" scope="singleton">
         <property  name="modelo" value="grafica"/>
         <property  name="precio" value="100"/>
         <property  name="marca" value="bellota"/>
@@ -91,7 +91,7 @@
     </bean>
 
     <!-- Procesador-->
-    <bean id="Procesador" class="entity.Procesador">
+    <bean id="Procesador" class="entity.Procesador" scope="singleton">
         <property  name="precio" value="1000"/>
         <property  name="hz" value="60"/>
         <property  name="marca" value="bellota"/>
@@ -99,7 +99,7 @@
     </bean>
 
     <!--  Placa base -->
-    <bean id="PlacaBase" class="entity.PlacaBase">
+    <bean id="PlacaBase" class="entity.PlacaBase" scope="singleton">
         <property  name="modelo" value="Placa Base"/>
         <property  name="precio" value="100"/>
         <property  name="marca" value="bellota"/>
