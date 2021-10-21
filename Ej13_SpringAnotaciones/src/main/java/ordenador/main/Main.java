@@ -13,8 +13,8 @@ public class Main {
         ApplicationContext context =new AnnotationConfigApplicationContext(Configuracion.class);
 
         Ordenador o= context.getBean("ordenador",Ordenador.class);
+        o.setPrecio(o.calcularPrecioComponentes());
         System.out.println(o);
-        System.out.println("Precio por componentes: "+o.calcularPrecioComponentes());
 
         DaoOrdenador daO = context.getBean("dao",DaoOrdenador.class);
         System.out.println(daO.guardar(o));
