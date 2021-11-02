@@ -12,7 +12,8 @@ public class Ordenador {
     private PlacaBase placaBase;
     private Procesador procesador;
 
-    public Ordenador(){}
+    public Ordenador() {
+    }
 
     public Ordenador(double precio, String marca, List<Ram> listRam, List<TarjetaGrafica> listaTarjetaGrafica, List<Periferico> listaPerifericos, PlacaBase placaBase, Procesador procesador) {
         this.precio = precio;
@@ -81,24 +82,24 @@ public class Ordenador {
         this.procesador = procesador;
     }
 
-    public double calcularPrecioComponentes(){
-        double total=0;
+    public double calcularPrecioComponentes() {
+        double total = 0;
 
-        double rams=0;
-        double tarjetaGraficas=0;
-        double perifericos=0;
+        double rams = 0;
+        double tarjetaGraficas = 0;
+        double perifericos = 0;
 
-        for (int i=0;i<listRam.size();i++) {
-            rams+=listRam.get(i).getPrecio();
+        for (int i = 0; i < listRam.size(); i++) {
+            rams += listRam.get(i).getPrecio();
         }
-        for (int i=0;i<listaTarjetaGrafica.size();i++) {
-            tarjetaGraficas+=listaTarjetaGrafica.get(i).getPrecio();
+        for (int i = 0; i < listaTarjetaGrafica.size(); i++) {
+            tarjetaGraficas += listaTarjetaGrafica.get(i).getPrecio();
         }
-        for (int i=0;i<listaPerifericos.size();i++) {
-            perifericos+=listaPerifericos.get(i).getPrecio();
+        for (int i = 0; i < listaPerifericos.size(); i++) {
+            perifericos += listaPerifericos.get(i).getPrecio();
         }
 
-        total=rams+tarjetaGraficas+perifericos+placaBase.getPrecio()+procesador.getPrecio();
+        total = rams + tarjetaGraficas + perifericos + placaBase.getPrecio() + procesador.getPrecio();
         return total;
     }
 

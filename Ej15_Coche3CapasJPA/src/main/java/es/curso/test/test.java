@@ -12,60 +12,60 @@ import java.util.Scanner;
 public class test {
     private static ApplicationContext context;
     private static GestorCoche gestorCoche;
-    private  static Coche car;
-    private static Scanner sc=new Scanner(System.in);
+    private static Coche car;
+    private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-         context=new AnnotationConfigApplicationContext(ConfiguracionJPA.class);
+        context = new AnnotationConfigApplicationContext(ConfiguracionJPA.class);
         int opcion = 0;
         boolean flag = true;
-         gestorCoche = context.getBean("gestorCoche",GestorCoche.class);
-         car=context.getBean("coche",Coche.class);
+        gestorCoche = context.getBean("gestorCoche", GestorCoche.class);
+        car = context.getBean("coche", Coche.class);
 
 
-       do {
-           System.out.println("BBDD COCHES\n" +
-                   "OPCIONES\n" +
-                   "1: Alta coche\n" +
-                   "2: Baja coche\n" +
-                   "3: Mostrar coche\n" +
-                   "4: Modificar coche\n" +
-                   "5: Listar todos los coches\n" +
-                   "6: salir\n");
-           opcion = sc.nextInt();
+        do {
+            System.out.println("BBDD COCHES\n" +
+                    "OPCIONES\n" +
+                    "1: Alta coche\n" +
+                    "2: Baja coche\n" +
+                    "3: Mostrar coche\n" +
+                    "4: Modificar coche\n" +
+                    "5: Listar todos los coches\n" +
+                    "6: salir\n");
+            opcion = sc.nextInt();
 
 
-           switch (opcion) {
-               case 1:
-                   newCar();
-                   break;
-               case 2:
-                   deleteCar();
+            switch (opcion) {
+                case 1:
+                    newCar();
+                    break;
+                case 2:
+                    deleteCar();
 
-                   break;
-               case 3:
-                   obtener();
-                   break;
+                    break;
+                case 3:
+                    obtener();
+                    break;
 
-               case 4:
+                case 4:
                     updateCar();
-                   break;
-               case 5:
-                   listar();
-                   break;
+                    break;
+                case 5:
+                    listar();
+                    break;
 
-               case 6:
-                   System.out.println("Saldra de la aplicación");
-                   flag=false;
-                   break;
-           }
+                case 6:
+                    System.out.println("Saldra de la aplicación");
+                    flag = false;
+                    break;
+            }
 
-       } while (flag);
+        } while (flag);
 
     }
 
-    public static void newCar(){
+    public static void newCar() {
         System.out.println("DAR DE ALTA un coche\n");
         System.out.print("Introduzca marca");
         sc.nextLine();
@@ -78,49 +78,49 @@ public class test {
         sc.nextLine();
         car.setMatricula(sc.nextLine());
 
-        if(gestorCoche.newCar(car)){
+        if (gestorCoche.newCar(car)) {
             System.out.println("Coche Creado correctamente");
-        }else{
+        } else {
             System.err.println("Error");
         }
     }
 
-    public static void deleteCar(){
+    public static void deleteCar() {
         System.out.println("DAR DE BAJA un coche\n");
         System.out.print("Introduzca la matricula del coche a borrar");
         sc.nextLine();
         gestorCoche.deleteCar(sc.nextLine());
-        if(gestorCoche.deleteCar(sc.nextLine())){
+        if (gestorCoche.deleteCar(sc.nextLine())) {
             System.out.println("Coche borrado correctamente");
-        }else{
+        } else {
             System.err.println("Error");
         }
     }
 
-    public static void updateCar(){
+    public static void updateCar() {
         System.out.println("Modifucar un coche\n");
         System.out.print("Introduzca matricula del coche a modificar");
         sc.nextLine();
-        car= gestorCoche.obtener(sc.nextLine());
-        if(car!=null){
+        car = gestorCoche.obtener(sc.nextLine());
+        if (car != null) {
             System.out.print("Introduzca marca");
             car.setMarca(sc.nextLine());
             System.out.print("Introduzca modelo");
             car.setModelo(sc.nextLine());
             System.out.print("Introduzca Kms");
             car.setKm(sc.nextInt());
-            if(gestorCoche.updateCar(car)){
+            if (gestorCoche.updateCar(car)) {
                 System.out.println("Coche modificado correctamente");
-            }else{
+            } else {
                 System.err.println("Error");
             }
-        }else{
+        } else {
             System.out.println("No existe ningun coche con esa matricula en la BBDD");
         }
 
     }
 
-    public static void obtener(){
+    public static void obtener() {
         System.out.println("OBTENER un coche\n");
         System.out.print("Introduzca matricula");
         sc.nextLine();
@@ -128,7 +128,7 @@ public class test {
         System.out.println("car: " + car);
     }
 
-    public static void listar(){
+    public static void listar() {
         System.out.println("LISTA DE TODOS los coche\n");
 
         List<Coche> listCoche = gestorCoche.listCar();

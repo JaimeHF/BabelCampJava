@@ -11,10 +11,10 @@
     <title>${j.nombre}</title>
 </head>
 <body>
-    <h2>ID: ${j.id}</h2>
-    <h2>Nombre Juego: ${j.nombre}</h2>
-    <h2>Compañia: ${j.compa}</h2>
-    <h2>Nota Media:${j.notaMedia}</h2>
-    <h2><a href="${j.enlace}">${j.nombre}</a></h2>
+<h2>ID: ${j.id}</h2>
+<h2>Nombre Juego: ${j.nombre}</h2>
+<h2>Compañia: ${j.compa}</h2>
+<h2>Nota Media:${j.notaMedia}</h2>
+<h2><a href="${j.enlace}">${j.nombre}</a></h2>
 </body>
 </html>

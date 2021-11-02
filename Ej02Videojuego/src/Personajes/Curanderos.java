@@ -4,7 +4,7 @@ import Armas.Arma;
 
 import java.util.List;
 
-public class Curanderos extends Jugador{
+public class Curanderos extends Jugador {
     private String atributo;
 
     public Curanderos(String nombre, double vida, List<Arma> listArma) {
@@ -16,11 +16,11 @@ public class Curanderos extends Jugador{
 
 
     public double atacar(int e) {
-        int ramdon= e;
+        int ramdon = e;
 
-        if(getListArma().get(ramdon).getTipo().equals("Rezo")){
-            return 12+getListArma().get(ramdon).usarArma();
-        }else {
+        if (getListArma().get(ramdon).getTipo().equals("Rezo")) {
+            return 12 + getListArma().get(ramdon).usarArma();
+        } else {
             return getListArma().get(ramdon).usarArma();
         }
 

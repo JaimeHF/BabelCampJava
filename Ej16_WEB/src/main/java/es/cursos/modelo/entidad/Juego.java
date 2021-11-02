@@ -8,7 +8,9 @@ public class Juego {
     private double notaMedia;
     private String enlace;
 
-    public Juego(){}
+    public Juego() {
+    }
+
     public Juego(int id, String nombre, String compa, double notaMedia, String enlace) {
         this.id = id;
         this.nombre = nombre;

@@ -8,13 +8,14 @@ import java.util.List;
 public class GestorJuego {
 
     private DaoJuego juegoDao;
-    public List<Juego> listar(){
-        juegoDao=new DaoJuego();
+
+    public List<Juego> listar() {
+        juegoDao = new DaoJuego();
         return juegoDao.listar();
     }
 
-    public Juego obtener(int id){
-        juegoDao =new DaoJuego();
+    public Juego obtener(int id) {
+        juegoDao = new DaoJuego();
         return juegoDao.obtener(id);
     }
 }

@@ -15,7 +15,8 @@ public class Cliente {
     private int edad;
     private List<Pedido> listPedido;
 
-    public Cliente(){}
+    public Cliente() {
+    }
 
     public Cliente(int id, String nombre, int edad, List<Pedido> listPedido) {
         this.id = id;

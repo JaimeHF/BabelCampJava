@@ -11,13 +11,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ApplicationContext context =new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Ordenador o= context.getBean("Ordenador",Ordenador.class);
+        Ordenador o = context.getBean("Ordenador", Ordenador.class);
         o.setPrecio(o.calcularPrecioComponentes());
         System.out.println(o);
 
-        DaoOrdenador daO = context.getBean("dao",DaoOrdenador.class);
+        DaoOrdenador daO = context.getBean("dao", DaoOrdenador.class);
         System.out.println(daO.guardar(o));
 
     }

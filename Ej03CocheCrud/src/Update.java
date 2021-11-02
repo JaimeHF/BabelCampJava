@@ -12,11 +12,11 @@ public class Update {
         String pass = "1234";
 
         // Paso 2: Interactuar con la BD
-        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);){
+        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);) {
             String sql = "update coche set marca=?, modelo=?, km=? WHERE IDcoche=?";
 
-            String marca="Opel";
-            String modelo="Astra";
+            String marca = "Opel";
+            String modelo = "Astra";
             int km = 150000;
             int id = 1;
 
@@ -32,7 +32,7 @@ public class Update {
 
             int afectados = sentencia.executeUpdate();
             System.out.println("Sentencia SQL ejecutada con éxito");
-            System.out.println("Registros afectados: "+afectados);
+            System.out.println("Registros afectados: " + afectados);
         } catch (SQLException e) {
             System.out.println("Error al añadir nuevo cliente");
             System.out.println(e.getMessage());

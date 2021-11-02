@@ -14,8 +14,8 @@ public class Pedido {
     private Date fecha;
 
 
-
-    public Pedido(){}
+    public Pedido() {
+    }
 
     public Pedido(int id, double importe, Date fecha, int clienteId) {
         this.id = id;
@@ -46,6 +46,7 @@ public class Pedido {
     public void getFecha(Date fecha) {
         this.fecha = fecha;
     }
+
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }

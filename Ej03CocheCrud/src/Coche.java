@@ -5,12 +5,12 @@ public class Coche {
     private int km;
 
     //  Diseño de tabla en BBDD
-   // CREATE TABLE `coche` (
-   //         `idCoche` int NOT NULL AUTO_INCREMENT,
-   //         `marca` varchar(45) NOT NULL,
-   //         `modelo` varchar(45) NOT NULL,
-   //          `km` int NOT NULL,
-   //          PRIMARY KEY (`idCoche`))
+    // CREATE TABLE `coche` (
+    //         `idCoche` int NOT NULL AUTO_INCREMENT,
+    //         `marca` varchar(45) NOT NULL,
+    //         `modelo` varchar(45) NOT NULL,
+    //          `km` int NOT NULL,
+    //          PRIMARY KEY (`idCoche`))
 
     public int getId() {
         return id;

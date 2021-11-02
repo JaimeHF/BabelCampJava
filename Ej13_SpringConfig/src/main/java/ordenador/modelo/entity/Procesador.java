@@ -13,7 +13,8 @@ public class Procesador {
     private String marca;
     private TarjetaGrafica tarjetaGrafica;
 
-    public Procesador(){}
+    public Procesador() {
+    }
 
     public Procesador(double precio, double hz, String marca, TarjetaGrafica tarjetaGrafica) {
         this.precio = precio;

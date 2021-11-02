@@ -15,19 +15,19 @@ public class Guerrero extends Jugador {
 
     @Override
     public String toString() {
-        return "Guerrero{ atributo=" + atributo + " nombre: "+getNombre()+"}";
+        return "Guerrero{ atributo=" + atributo + " nombre: " + getNombre() + "}";
     }
 
 
     @Override
     public double atacar(int e) {
-        int ramdon= e;
+        int ramdon = e;
 
-            if(getListArma().get(ramdon).getTipo().equals("Espada")||getListArma().get(ramdon).getTipo().equals("Arco")){
-                return 12+getListArma().get(ramdon).usarArma();
-            }else {
-                return getListArma().get(ramdon).usarArma();
-            }
+        if (getListArma().get(ramdon).getTipo().equals("Espada") || getListArma().get(ramdon).getTipo().equals("Arco")) {
+            return 12 + getListArma().get(ramdon).usarArma();
+        } else {
+            return getListArma().get(ramdon).usarArma();
+        }
 
     }
 

@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class DaoOrdenador {
-    public String guardar(Ordenador o){
+    public String guardar(Ordenador o) {
 
         try {
             FileOutputStream fos = new FileOutputStream("src/main/resources/Ordenador.txt");
-            ObjectOutputStream oos= new ObjectOutputStream(fos);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(o.toString());
 
             oos.flush();

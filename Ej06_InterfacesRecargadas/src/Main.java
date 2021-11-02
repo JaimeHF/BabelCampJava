@@ -9,16 +9,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Vehiculo> listVehiculo = new ArrayList<Vehiculo>();
-        Scanner sc=new Scanner(System.in);
-        listVehiculo.add(new CocheMoto(0,90,"Opel"));
-        listVehiculo.add(new CocheMoto(1,65,"Triumph"));
-        listVehiculo.add(new Barco(2,150,"Titanic"));
-        listVehiculo.add(new Avion(3,110,"Airbus A400M"));
+        Scanner sc = new Scanner(System.in);
+        listVehiculo.add(new CocheMoto(0, 90, "Opel"));
+        listVehiculo.add(new CocheMoto(1, 65, "Triumph"));
+        listVehiculo.add(new Barco(2, 150, "Titanic"));
+        listVehiculo.add(new Avion(3, 110, "Airbus A400M"));
         System.out.println("Introduzca un numero que sera el impulso para los vehiculos");
-        int num= sc.nextInt();
+        int num = sc.nextInt();
 
 
-        for(int i=0;i<listVehiculo.size();i++){
+        for (int i = 0; i < listVehiculo.size(); i++) {
             System.out.println(listVehiculo.get(i).mover(num));
 
         }

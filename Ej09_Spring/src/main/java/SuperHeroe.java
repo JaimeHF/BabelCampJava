@@ -7,7 +7,6 @@ public class SuperHeroe {
     private String superPoder;
 
 
-
     public int getId() {
         return id;
     }

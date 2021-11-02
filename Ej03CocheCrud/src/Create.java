@@ -11,17 +11,17 @@ public class Create {
         String pass = "1234";
 
 
-        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass)){
+        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass)) {
             String sql = "INSERT INTO coche (marca, modelo, km) VALUES (?, ?, ?)";
 
-            String marca="Opel";
-            String modelo="Astra";
+            String marca = "Opel";
+            String modelo = "Astra";
             int km = 150000;
 
             System.out.println("SQL:");
             System.out.println(sql);
 
-            PreparedStatement sentencia= con.prepareStatement(sql);
+            PreparedStatement sentencia = con.prepareStatement(sql);
 
             sentencia.setString(1, marca);
             sentencia.setString(2, modelo);
@@ -29,7 +29,7 @@ public class Create {
 
             int afectados = sentencia.executeUpdate();
             System.out.println("Sentencia SQL ejecutada con éxito");
-            System.out.println("Registros afectados: "+afectados);
+            System.out.println("Registros afectados: " + afectados);
 
         } catch (SQLException e) {
             System.out.println("Error al añadir una nueva persona");

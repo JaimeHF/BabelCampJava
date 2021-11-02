@@ -10,8 +10,8 @@ public class Avion extends Vehiculo implements Movible {
 
     @Override
     public String mover(int metros) {
-        double total=metros+(getCv()*3);
-        return "Se mueve por el aire "+total+" metros";
+        double total = metros + (getCv() * 3);
+        return "Se mueve por el aire " + total + " metros";
     }
 
 }

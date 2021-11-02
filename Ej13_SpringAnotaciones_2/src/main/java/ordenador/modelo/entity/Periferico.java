@@ -6,7 +6,9 @@ public class Periferico {
     private double precio;
     private String marca;
 
-    public Periferico(){}
+    public Periferico() {
+    }
+
     public Periferico(String nombre, double precio, String marca) {
         this.nombre = nombre;
         this.precio = precio;

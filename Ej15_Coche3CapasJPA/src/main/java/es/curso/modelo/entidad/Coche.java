@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Scope("prototype")
 
 @Entity
-@Table(name="coches")
+@Table(name = "coches")
 public class Coche {
 
     @Id
@@ -19,7 +19,8 @@ public class Coche {
     private String modelo;
     private int Km;
 
-    public Coche(){}
+    public Coche() {
+    }
 
     public Coche(String matricula, String marca, String modelo, int km) {
         this.matricula = matricula;
@@ -31,27 +32,35 @@ public class Coche {
     public String getMatricula() {
         return matricula;
     }
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
     public String getMarca() {
         return marca;
     }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
     public String getModelo() {
         return modelo;
     }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
     public int getNumeroKm() {
         return Km;
     }
+
     public void setKm(int numeroKm) {
         this.Km = numeroKm;
     }
+
     @Override
     public String toString() {
         return "Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", numeroKm=" + Km

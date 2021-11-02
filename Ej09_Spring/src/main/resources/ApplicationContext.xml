@@ -4,17 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="SL" class="SuperHeroe" scope="singleton">
-        <property  name="id" value="1"/>
+        <property name="id" value="1"/>
         <property name="nombre" value="Juan Lopez"></property>
-        <property  name="nombreHeroe" value="Super Lopez"/>
-        <property  name="poder" value="55"/>
-        <property  name="superPoder" value="Superman Español"/>
+        <property name="nombreHeroe" value="Super Lopez"/>
+        <property name="poder" value="55"/>
+        <property name="superPoder" value="Superman Español"/>
     </bean>
 
     <bean id="CE" class="SuperHeroe" scope="singleton">
         <property name="id" value="2"/>
         <property name="nombre" value="Cálico Jack"/>
-        <property  name="nombreHeroe" value="Calico Electronico"/>
+        <property name="nombreHeroe" value="Calico Electronico"/>
         <property name="poder" value="60"/>
         <property name="superPoder" value="Artefactos  de ElectronicaWeb"/>
     </bean>
@@ -31,13 +31,12 @@
         <property name="poder" value="100"></property>
     </bean>
     <bean id="volar" class="SuperHeroe" scope="prototype">
-        <property  name="superPoder" value="Volar"/>
+        <property name="superPoder" value="Volar"/>
     </bean>
 
     <bean id="listSuperHeroes" class="java.util.ArrayList"></bean>
     <bean id="listSuperHeroesVolar" class="java.util.ArrayList"></bean>
     <bean id="listSuperHeroesPoder" class="java.util.ArrayList"></bean>
-
 
 
 </beans>

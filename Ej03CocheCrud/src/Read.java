@@ -10,7 +10,7 @@ public class Read {
         String user = "root";
         String pass = "1234";
 
-        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);){
+        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);) {
             PreparedStatement sentencia = con.prepareStatement("SELECT * FROM coche");
             ResultSet rs = sentencia.executeQuery();
             while (rs.next()) {//preguntamos si hay mas filas

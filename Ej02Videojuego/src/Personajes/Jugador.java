@@ -12,7 +12,7 @@ public abstract class Jugador {
     public Jugador(String nombre, double vida, List<Arma> listArma) {
         this.nombre = nombre;
         this.vida = vida;
-        this.listArma=listArma;
+        this.listArma = listArma;
 
     }
 

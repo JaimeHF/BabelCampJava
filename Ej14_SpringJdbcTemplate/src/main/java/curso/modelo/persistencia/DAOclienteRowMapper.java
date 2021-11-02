@@ -11,12 +11,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Component
-public class DAOclienteRowMapper  implements RowMapper<Cliente> {
+public class DAOclienteRowMapper implements RowMapper<Cliente> {
 
 
     @Override
     public Cliente mapRow(ResultSet rs, int i) throws SQLException {
-        Cliente c=new Cliente();
+        Cliente c = new Cliente();
         c.setId(rs.getInt("id"));
         c.setNombre(rs.getString("nombre"));
         c.setEdad(rs.getInt("edad"));

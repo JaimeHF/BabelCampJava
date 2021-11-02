@@ -16,7 +16,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages = { "es.curso" })
+@ComponentScan(basePackages = {"es.curso"})
 
 @EnableTransactionManagement
 public class ConfiguracionJPA {

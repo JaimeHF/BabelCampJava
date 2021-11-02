@@ -8,10 +8,9 @@ public class Barco extends Vehiculo implements Movible {
     }
 
 
-
     @Override
     public String mover(int metros) {
-        double total=metros+(getCv()*2);
-        return "Se mueve por el mar "+total+" metros";
+        double total = metros + (getCv() * 2);
+        return "Se mueve por el mar " + total + " metros";
     }
 }

@@ -27,6 +27,5 @@ public abstract class Arma {
     }
 
 
-
     public abstract double usarArma();
 }

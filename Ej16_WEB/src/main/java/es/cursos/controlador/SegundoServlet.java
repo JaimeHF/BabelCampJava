@@ -16,7 +16,7 @@ public class SegundoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        GestorJuego gj= new GestorJuego();
+        GestorJuego gj = new GestorJuego();
 
         String id = request.getParameter("id");
 
@@ -24,10 +24,10 @@ public class SegundoServlet extends HttpServlet {
 
         Juego j = gj.obtener(idNumerico);
 
-        if(j != null) {
+        if (j != null) {
             request.setAttribute("j", j);
             request.getRequestDispatcher("juegoDetalle.jsp").forward(request, response);
-        }else {
+        } else {
             request.getRequestDispatcher("errorPelicula.jsp").forward(request, response);
         }
     }

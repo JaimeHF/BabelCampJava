@@ -9,7 +9,7 @@ public class Delete {
         String user = "root";
         String pass = "1234";
 
-        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);){
+        try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass);) {
             String sql = "DELETE FROM coche WHERE IDcoche=?";
 
             int id = 2;
@@ -22,7 +22,7 @@ public class Delete {
 
             int afectados = sentencia.executeUpdate();
             System.out.println("Sentencia SQL ejecutada con éxito");
-            System.out.println("Registros afectados: "+afectados);
+            System.out.println("Registros afectados: " + afectados);
         } catch (SQLException e) {
             System.out.println("Error al borrar el cliente");
             System.out.println(e.getMessage());

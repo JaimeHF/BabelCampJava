@@ -23,21 +23,21 @@ public class CocheDao implements DAOCoche {
 
     @Override
     public boolean deleteCar(String matricula) {
-       Coche car= em.find(Coche.class,matricula);
-       em.refresh(car);
+        Coche car = em.find(Coche.class, matricula);
+        em.refresh(car);
         return true;
     }
 
     @Override
     public boolean updateCar(Coche car) {
-         em.merge(car);
+        em.merge(car);
         return true;
     }
 
     @Override
     public Coche obtener(String matricula) {
 
-        return em.find(Coche.class,matricula);
+        return em.find(Coche.class, matricula);
     }
 
     @Override

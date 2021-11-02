@@ -11,10 +11,10 @@
     <title>Lista Juegos</title>
 </head>
 <body>
-    <h1>Listado de Peliculas</h1>
-    <h2>${lista}</h2>
-    <form action="juegoDetalle">
-        id: <input type="text" name="id">
-        <input type="submit" value="Entrar">
+<h1>Listado de Peliculas</h1>
+<h2>${lista}</h2>
+<form action="juegoDetalle">
+    id: <input type="text" name="id">
+    <input type="submit" value="Entrar">
 </body>
 </html>

@@ -13,7 +13,8 @@ public class PlacaBase {
     @Value("Base Placa")
     private String modelo;
 
-    public PlacaBase(){}
+    public PlacaBase() {
+    }
 
     public PlacaBase(double precio, String marca, String modelo) {
         this.precio = precio;

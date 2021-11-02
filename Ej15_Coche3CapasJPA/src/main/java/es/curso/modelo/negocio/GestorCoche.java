@@ -13,31 +13,33 @@ import java.util.List;
 public class GestorCoche {
 
     @Autowired
-    private CocheDao carDao=new CocheDao();
+    private CocheDao carDao = new CocheDao();
 
     @Transactional
-    public boolean newCar(Coche c){
-            boolean alta = carDao.newCar(c);
-            return alta;
+    public boolean newCar(Coche c) {
+        boolean alta = carDao.newCar(c);
+        return alta;
     }
+
     @Transactional
-    public boolean deleteCar(String matricula){
+    public boolean deleteCar(String matricula) {
         boolean baja = carDao.deleteCar(matricula);
         return baja;
     }
+
     @Transactional
-    public boolean updateCar(Coche c){
-            boolean modif = carDao.updateCar(c);
-            return modif;
+    public boolean updateCar(Coche c) {
+        boolean modif = carDao.updateCar(c);
+        return modif;
     }
 
-    public Coche obtener(String matricula){
-        Coche c =carDao.obtener(matricula);
+    public Coche obtener(String matricula) {
+        Coche c = carDao.obtener(matricula);
         return c;
     }
 
-    public List<Coche> listCar(){
-        List <Coche> lista = carDao.listCar();
+    public List<Coche> listCar() {
+        List<Coche> lista = carDao.listCar();
         return lista;
     }
 }

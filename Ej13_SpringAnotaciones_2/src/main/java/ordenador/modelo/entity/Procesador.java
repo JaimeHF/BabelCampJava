@@ -18,7 +18,8 @@ public class Procesador {
     @Qualifier("Tarjeta1")
     private TarjetaGrafica tarjetaGrafica;
 
-    public Procesador(){}
+    public Procesador() {
+    }
 
     public Procesador(double precio, double hz, String marca, TarjetaGrafica tarjetaGrafica) {
         this.precio = precio;

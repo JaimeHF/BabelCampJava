@@ -6,7 +6,8 @@ public class TarjetaGrafica {
     private Ram ram;
     private String modelo;
 
-    public TarjetaGrafica(){}
+    public TarjetaGrafica() {
+    }
 
     public TarjetaGrafica(double precio, String marca, Ram ram, String modelo) {
         this.precio = precio;

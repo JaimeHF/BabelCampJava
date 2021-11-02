@@ -5,7 +5,9 @@ public class Ram {
     private double hz;
     private String marca;
 
-    public Ram(){}
+    public Ram() {
+    }
+
     public Ram(double precio, double hz, String marca) {
         this.precio = precio;
         this.hz = hz;

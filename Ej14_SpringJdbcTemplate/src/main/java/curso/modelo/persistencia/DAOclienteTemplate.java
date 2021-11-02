@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-public class DAOclienteTemplate implements DAOcliente{
+public class DAOclienteTemplate implements DAOcliente {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -22,7 +22,7 @@ public class DAOclienteTemplate implements DAOcliente{
     @Override
     public int insetarCliente(Cliente c) {
         String query = "insert into cliente ( Nombre, edad) values (?, ?)";
-        int id=jdbcTemplate.update(query,c.getNombre(),c.getEdad());
+        int id = jdbcTemplate.update(query, c.getNombre(), c.getEdad());
         return id;
     }
 
@@ -33,7 +33,7 @@ public class DAOclienteTemplate implements DAOcliente{
     }
 
     @Override
-    public int modificarCliente(Cliente c,int id) {
+    public int modificarCliente(Cliente c, int id) {
         String query = "update cliente SET NOMBRE=?, EDAD=? where id=?";
 
         int id2 = jdbcTemplate.update(query, c.getNombre(), c.getEdad(), id);

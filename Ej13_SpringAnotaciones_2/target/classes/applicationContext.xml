@@ -11,14 +11,14 @@
         <constructor-arg>
             <list value-type="ordenador.modelo.entity.Ram">
                 <bean class="ordenador.modelo.entity.Ram">
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="hz" value="60"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="hz" value="60"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                 </bean>
                 <bean class="ordenador.modelo.entity.Ram">
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="hz" value="60"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="hz" value="60"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                 </bean>
 
             </list>
@@ -27,19 +27,19 @@
 
     <!-- RAMS para asociar a componentes-->
     <bean id="Ram1" class="ordenador.modelo.entity.Ram" scope="singleton">
-        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-        <property  name="hz" value="60"/>
-        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+        <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property name="hz" value="60"/>
+        <property name="marca" value="#{Randoms.randomNombre()}"/>
     </bean>
     <bean id="Ram2" class="ordenador.modelo.entity.Ram" scope="singleton">
-        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-        <property  name="hz" value="60"/>
-        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+        <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property name="hz" value="60"/>
+        <property name="marca" value="#{Randoms.randomNombre()}"/>
     </bean>
     <bean id="Ram3" class="ordenador.modelo.entity.Ram" scope="singleton">
-        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-        <property  name="hz" value="60"/>
-        <property  name="marca" value="#{Randoms.randomNombre()}"/>
+        <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property name="hz" value="60"/>
+        <property name="marca" value="#{Randoms.randomNombre()}"/>
     </bean>
 
     <!-- Lista Perifericos-->
@@ -47,19 +47,19 @@
         <constructor-arg>
             <list value-type="ordenador.modelo.entity.Periferico">
                 <bean class="ordenador.modelo.entity.Periferico">
-                    <property  name="nombre" value="Monitor"/>
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="nombre" value="Monitor"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                 </bean>
                 <bean class="ordenador.modelo.entity.Periferico">
-                    <property  name="nombre" value="Teclado"/>
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="nombre" value="Teclado"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                 </bean>
                 <bean class="ordenador.modelo.entity.Periferico">
-                    <property  name="nombre" value="Raton"/>
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="nombre" value="Raton"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                 </bean>
             </list>
         </constructor-arg>
@@ -69,17 +69,17 @@
     <bean id="listaTarjetaGrafica" class="java.util.ArrayList">
         <constructor-arg>
             <list value-type="ordenador.modelo.entity.TarjetaGrafica">
-                <bean class="ordenador.modelo.entity.TarjetaGrafica" >
-                    <property  name="modelo" value="grafica"/>
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
+                <bean class="ordenador.modelo.entity.TarjetaGrafica">
+                    <property name="modelo" value="grafica"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
                     <property name="ram" ref="Ram2"/>
                 </bean>
                 <bean class="ordenador.modelo.entity.TarjetaGrafica">
-                    <property  name="modelo" value="grafica"/>
-                    <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-                    <property  name="marca" value="#{Randoms.randomNombre()}"/>
-                    <property  name="ram" ref="Ram1"/>
+                    <property name="modelo" value="grafica"/>
+                    <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+                    <property name="marca" value="#{Randoms.randomNombre()}"/>
+                    <property name="ram" ref="Ram1"/>
                 </bean>
             </list>
         </constructor-arg>
@@ -87,10 +87,10 @@
 
     <!-- Tarjetas Graficas para asociar a componentes-->
     <bean id="Tarjeta1" class="ordenador.modelo.entity.TarjetaGrafica" scope="singleton">
-        <property  name="modelo" value="grafica"/>
-        <property  name="precio" value="#{Randoms.randomsPrecio()}"/>
-        <property  name="marca" value="#{Randoms.randomNombre()}"/>
-        <property  name="ram" ref="Ram3"/>
+        <property name="modelo" value="grafica"/>
+        <property name="precio" value="#{Randoms.randomsPrecio()}"/>
+        <property name="marca" value="#{Randoms.randomNombre()}"/>
+        <property name="ram" ref="Ram3"/>
     </bean>
 
 

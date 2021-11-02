@@ -4,7 +4,7 @@ import Armas.Arma;
 
 import java.util.List;
 
-public class Mago extends Jugador{
+public class Mago extends Jugador {
     private String atributo;
 
     public Mago(String nombre, double vida, List<Arma> listArma) {
@@ -15,11 +15,11 @@ public class Mago extends Jugador{
     @Override
 
     public double atacar(int e) {
-        int ramdon= e;
+        int ramdon = e;
 
-        if(getListArma().get(ramdon).getTipo().equals("Hechizo")){
-            return 12+getListArma().get(ramdon).usarArma();
-        }else {
+        if (getListArma().get(ramdon).getTipo().equals("Hechizo")) {
+            return 12 + getListArma().get(ramdon).usarArma();
+        } else {
             return getListArma().get(ramdon).usarArma();
         }
 
